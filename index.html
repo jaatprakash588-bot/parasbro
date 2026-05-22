@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paras Hair Salon | Premium Hair Salon</title>
+    <meta name="description" content="Experience high-end hair styling, precision coloring, and luxury treatments at Paras Hair Salon. Book your appointment online today.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-luxe">PARAS</span>
+                <span class="logo-shear" style="margin-left: 8px;">HAIR SALON</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#stylists" class="nav-link">Stylists</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#booking" class="nav-btn-book">Book Now</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-container">
+            <img src="assets/hero_bg.png" alt="Paras Hair Salon Interior" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-subtitle animate-fade-in">PREMIUM HAIR SALON & EXPERIENCE</span>
+            <h1 class="hero-title animate-slide-up">Redefine Your Style.<br>Reveal Your Essence.</h1>
+            <p class="hero-desc animate-slide-up-delay">Step into a world of curated aesthetics, master craftsmanship, and bespoke hair artistry. Your ultimate hair transformation awaits.</p>
+            <div class="hero-cta animate-fade-in-delay">
+                <a href="#booking" class="btn btn-primary">Book an Appointment</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="mouse-wheel"></span>
+        </div>
+    </header>
+
+    <!-- Stats Ribbon -->
+    <section class="stats-ribbon">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Years of Artistry</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">9k+</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">4.9</span>
+                <span class="stat-label">Google Rating</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Menu</span>
+                <h2 class="section-title">Signature Services</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="services-tabs">
+                <button class="tab-btn active" data-category="cuts">Cuts & Styling</button>
+                <button class="tab-btn" data-category="color">Coloring & Balayage</button>
+                <button class="tab-btn" data-category="treatments">Treatments</button>
+                <button class="tab-btn" data-category="packages">Luxury Packages</button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid" id="services-grid">
+                <!-- Haircuts & Styling (Active by Default) -->
+                <div class="service-card" data-category="cuts">
+                    <div class="service-info">
+                        <h3>Signature Cut & Blowout</h3>
+                        <p>Tailored haircut, clarifying wash, nourishing conditioner, and professional blowout.</p>
+                        <span class="service-duration">60 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$85</span>
+                        <button class="btn-add-service" data-id="cut-blowout" data-name="Signature Cut & Blowout" data-price="85" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="cuts">
+                    <div class="service-info">
+                        <h3>Men's Elite Cut & Style</h3>
+                        <p>Precision fade or scissor cut, scalp massage, hot towel treatment, and styling.</p>
+                        <span class="service-duration">45 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$55</span>
+                        <button class="btn-add-service" data-id="mens-cut" data-name="Men's Elite Cut & Style" data-price="55" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="cuts">
+                    <div class="service-info">
+                        <h3>Glissade Blowout & Wave</h3>
+                        <p>Luxury wash followed by expert blowout and styling with soft, bouncy beach waves.</p>
+                        <span class="service-duration">45 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$60</span>
+                        <button class="btn-add-service" data-id="blowout-wave" data-name="Glissade Blowout & Wave" data-price="60" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coloring & Balayage -->
+                <div class="service-card hidden" data-category="color">
+                    <div class="service-info">
+                        <h3>Luxe Balayage & Glaze</h3>
+                        <p>Custom hand-painted highlights, personalized gloss glaze tone, and deep hydration.</p>
+                        <span class="service-duration">180 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$240</span>
+                        <button class="btn-add-service" data-id="balayage" data-name="Luxe Balayage & Glaze" data-price="240" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card hidden" data-category="color">
+                    <div class="service-info">
+                        <h3>Full Dimensional Highlights</h3>
+                        <p>Full foil coverage for brilliant blonde tones or dimensional brunette lowlights.</p>
+                        <span class="service-duration">150 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$195</span>
+                        <button class="btn-add-service" data-id="full-highlights" data-name="Full Dimensional Highlights" data-price="195" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card hidden" data-category="color">
+                    <div class="service-info">
+                        <h3>Root Fusion Retouch</h3>
+                        <p>Precise regrowth root color coverage matching your current custom shade.</p>
+                        <span class="service-duration">90 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$90</span>
+                        <button class="btn-add-service" data-id="root-touchup" data-name="Root Fusion Retouch" data-price="90" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Treatments -->
+                <div class="service-card hidden" data-category="treatments">
+                    <div class="service-info">
+                        <h3>Keratin Silk Therapy</h3>
+                        <p>Smoothing treatment that eliminates frizz, adds intense gloss, and cuts style time.</p>
+                        <span class="service-duration">120 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$280</span>
+                        <button class="btn-add-service" data-id="keratin" data-name="Keratin Silk Therapy" data-price="280" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card hidden" data-category="treatments">
+                    <div class="service-info">
+                        <h3>Olaplex Bond Rebuilder</h3>
+                        <p>Intensive hair restructuring treatment that repairs broken disulfide bonds.</p>
+                        <span class="service-duration">45 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$75</span>
+                        <button class="btn-add-service" data-id="olaplex" data-name="Olaplex Bond Rebuilder" data-price="75" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card hidden" data-category="treatments">
+                    <div class="service-info">
+                        <h3>Deep Alchemy Masque</h3>
+                        <p>Custom-formulated moisture or strength infusion using organic oils and herbs.</p>
+                        <span class="service-duration">30 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$45</span>
+                        <button class="btn-add-service" data-id="deep-masque" data-name="Deep Alchemy Masque" data-price="45" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Packages -->
+                <div class="service-card hidden" data-category="packages">
+                    <div class="service-info">
+                        <h3>The Royal Makeover</h3>
+                        <p>Signature Cut, Balayage, Olaplex Treatment, Blowout, and glass of champagne.</p>
+                        <span class="service-duration">240 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$380</span>
+                        <button class="btn-add-service" data-id="royal-makeover" data-name="The Royal Makeover" data-price="380" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="service-card hidden" data-category="packages">
+                    <div class="service-info">
+                        <h3>Bridal Bliss Trial & Styling</h3>
+                        <p>Complete styling trial and day-of custom luxury bridal updo and veil placement.</p>
+                        <span class="service-duration">180 mins</span>
+                    </div>
+                    <div class="service-price-action">
+                        <span class="service-price">$300</span>
+                        <button class="btn-add-service" data-id="bridal-bliss" data-name="Bridal Bliss Trial & Styling" data-price="300" aria-label="Add service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stylist Section -->
+    <section id="stylists" class="stylists-section section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Artists</span>
+                <h2 class="section-title">Master Stylists</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="stylists-grid">
+                <!-- Stylist 1 (Unsplash Asset) -->
+                <div class="stylist-card">
+                    <div class="stylist-img-container">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400&h=500" alt="Sarah Jenkins" class="stylist-img">
+                        <div class="stylist-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+                                </a>
+                                <a href="#" aria-label="Twitter">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-details">
+                        <h3>Sarah Jenkins</h3>
+                        <span class="stylist-role">Creative Director & Color Expert</span>
+                        <p>Specializes in avant-garde coloring, gorgeous balayages, and modern transformations.</p>
+                        <div class="stylist-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.9/5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stylist 2 (Generated Local Asset) -->
+                <div class="stylist-card">
+                    <div class="stylist-img-container">
+                        <img src="assets/stylist_marcus.png" alt="Marcus Vance" class="stylist-img">
+                        <div class="stylist-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-details">
+                        <h3>Marcus Vance</h3>
+                        <span class="stylist-role">Senior Precision Barber</span>
+                        <p>Expert in sharp skin fades, structural shears, classic shaves, and texturing.</p>
+                        <div class="stylist-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(5.0/5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stylist 3 (Unsplash Asset) -->
+                <div class="stylist-card">
+                    <div class="stylist-img-container">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=500" alt="Elena Rostova" class="stylist-img">
+                        <div class="stylist-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stylist-details">
+                        <h3>Elena Rostova</h3>
+                        <span class="stylist-role">Styling & Keratin Specialist</span>
+                        <p>Specializes in voluminous blowouts, keratin smoothing, and intricate bridal updos.</p>
+                        <div class="stylist-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.8/5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking System Section -->
+    <section id="booking" class="booking-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Reservations</span>
+                <h2 class="section-title">Schedule Appointment</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="booking-grid">
+                <!-- Form Form -->
+                <form class="booking-form glass-panel" id="appointment-form">
+                    <div class="form-step active" id="step-1">
+                        <h3 class="step-title">1. Select Services</h3>
+                        <div class="selected-services-container" id="selected-services-box">
+                            <p class="placeholder-text">Please click the "+" on any service card in the menu above, or choose a fast-add service below:</p>
+                        </div>
+                        <div class="fast-services-list">
+                            <div class="fast-service-tag" data-id="cut-blowout" data-name="Signature Cut & Blowout" data-price="85">+ Cut & Blowout ($85)</div>
+                            <div class="fast-service-tag" data-id="mens-cut" data-name="Men's Elite Cut & Style" data-price="55">+ Men's Cut ($55)</div>
+                            <div class="fast-service-tag" data-id="balayage" data-name="Luxe Balayage & Glaze" data-price="240">+ Balayage ($240)</div>
+                            <div class="fast-service-tag" data-id="keratin" data-name="Keratin Silk Therapy" data-price="280">+ Keratin Treatment ($280)</div>
+                        </div>
+                    </div>
+
+                    <div class="form-step">
+                        <h3 class="step-title">2. Choose Your Artist</h3>
+                        <div class="stylist-picker">
+                            <label class="stylist-option active">
+                                <input type="radio" name="booking-stylist" value="Any Stylist" checked>
+                                <div class="option-avatar">★</div>
+                                <div class="option-info">
+                                    <span class="option-name">Any Stylist</span>
+                                    <span class="option-meta">Maximum availability</span>
+                                </div>
+                            </label>
+                            <label class="stylist-option">
+                                <input type="radio" name="booking-stylist" value="Sarah Jenkins">
+                                <div class="option-avatar"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" alt="Sarah"></div>
+                                <div class="option-info">
+                                    <span class="option-name">Sarah Jenkins</span>
+                                    <span class="option-meta">Color Expert</span>
+                                </div>
+                            </label>
+                            <label class="stylist-option">
+                                <input type="radio" name="booking-stylist" value="Marcus Vance">
+                                <div class="option-avatar"><img src="assets/stylist_marcus.png" alt="Marcus"></div>
+                                <div class="option-info">
+                                    <span class="option-name">Marcus Vance</span>
+                                    <span class="option-meta">Precision Cuts</span>
+                                </div>
+                            </label>
+                            <label class="stylist-option">
+                                <input type="radio" name="booking-stylist" value="Elena Rostova">
+                                <div class="option-avatar"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100&h=100" alt="Elena"></div>
+                                <div class="option-info">
+                                    <span class="option-name">Elena Rostova</span>
+                                    <span class="option-meta">Styling Expert</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-step">
+                        <h3 class="step-title">3. Select Date & Time</h3>
+                        <div class="datetime-picker">
+                            <div class="form-group">
+                                <label for="booking-date">Choose Date</label>
+                                <input type="date" id="booking-date" required>
+                            </div>
+                            <div class="time-slots-container">
+                                <span class="slots-label">Available Slots</span>
+                                <div class="slots-grid" id="slots-grid">
+                                    <!-- Time slots will be injected by JavaScript -->
+                                    <p class="placeholder-text select-date-notice">Please pick a date first.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-step">
+                        <h3 class="step-title">4. Personal Information</h3>
+                        <div class="contact-form-fields">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="client-name">Full Name</label>
+                                    <input type="text" id="client-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="client-email">Email Address</label>
+                                    <input type="email" id="client-email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="client-phone">Phone Number</label>
+                                    <input type="tel" id="client-phone" placeholder="(555) 000-0000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="client-notes">Special Requests (Optional)</label>
+                                    <input type="text" id="client-notes" placeholder="E.g. allergies, hair texture details">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Booking Summary Side Card -->
+                <div class="booking-summary-card glass-panel" id="summary-card">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-divider"></div>
+                    <ul class="summary-details">
+                        <li class="summary-row">
+                            <span class="label">Stylist:</span>
+                            <span class="val" id="summary-stylist">Any Stylist</span>
+                        </li>
+                        <li class="summary-row">
+                            <span class="label">Date:</span>
+                            <span class="val" id="summary-date">Not selected</span>
+                        </li>
+                        <li class="summary-row">
+                            <span class="label">Time:</span>
+                            <span class="val" id="summary-time">Not selected</span>
+                        </li>
+                    </ul>
+                    <div class="summary-divider"></div>
+                    <div class="summary-services-list">
+                        <h4>Services Selected</h4>
+                        <div id="summary-services-items">
+                            <p class="no-services-msg">No services selected yet.</p>
+                        </div>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-total">
+                        <span>Total:</span>
+                        <span class="total-price" id="summary-total-price">$0</span>
+                    </div>
+                    <button type="submit" form="appointment-form" class="btn btn-primary btn-block" id="btn-submit-booking" disabled>Confirm Booking</button>
+                    <p class="booking-terms">Cancellation policy: Cancel for free up to 24 hours prior to appointment time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Visual Inspiration</span>
+                <h2 class="section-title">Lookbook Gallery</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Looks</button>
+                <button class="filter-btn" data-filter="cuts">Cuts</button>
+                <button class="filter-btn" data-filter="coloring">Coloring</button>
+                <button class="filter-btn" data-filter="styling">Styling</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Balayage (Generated Local Image) -->
+                <div class="gallery-item" data-category="coloring">
+                    <img src="assets/hair_balayage.png" alt="Sleek Platinum Balayage Coloring">
+                    <div class="gallery-hover">
+                        <h4>Platinum Balayage</h4>
+                        <p>Dimensional hand-painted blonde overlay</p>
+                    </div>
+                </div>
+
+                <!-- Fade (Unsplash) -->
+                <div class="gallery-item" data-category="cuts">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600&h=600" alt="Classic Skin Fade Haircut">
+                    <div class="gallery-hover">
+                        <h4>Precision Skin Fade</h4>
+                        <p>Clean modern lines & blended sides</p>
+                    </div>
+                </div>
+
+                <!-- Blowout (Unsplash) -->
+                <div class="gallery-item" data-category="styling">
+                    <img src="https://images.unsplash.com/photo-1595959183075-c1d09e7e951c?auto=format&fit=crop&q=80&w=600&h=600" alt="Shiny Voluminous Blowout Styling">
+                    <div class="gallery-hover">
+                        <h4>Bouncy Blowout</h4>
+                        <p>Glamorous glossy volume curls</p>
+                    </div>
+                </div>
+
+                <!-- Hair Spa / Treatment (Unsplash) -->
+                <div class="gallery-item" data-category="styling">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600&h=600" alt="Nourishing Scalp Treatment">
+                    <div class="gallery-hover">
+                        <h4>Deep Moist Treatment</h4>
+                        <p>Revitalizing nourishing wash</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section id="testimonials" class="testimonials-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="testimonial-slider-container">
+                <div class="testimonial-track" id="testimonial-track">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="star-rating">★★★★★</div>
+                        <p class="testimonial-quote">"Absolute luxury experience. Sarah completely transformed my hair with the custom balayage. I've never received so many compliments in my life. The details in this place are exquisite."</p>
+                        <div class="client-info">
+                            <span class="client-name">Claire Dupont</span>
+                            <span class="client-tag">Regular Client</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="star-rating">★★★★★</div>
+                        <p class="testimonial-quote">"Marcus is a true artist with the shears. Finding a barber who understands hair density and face shape is rare. Best skin fade in town, hands down."</p>
+                        <div class="client-info">
+                            <span class="client-name">Robert Sterling</span>
+                            <span class="client-tag">Regular Client</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="star-rating">★★★★★</div>
+                        <p class="testimonial-quote">"The Olaplex treatment combined with the glissade blowout made my hair feel softer than silk. I love the interactive booking system too. It's so quick to book!"</p>
+                        <div class="client-info">
+                            <span class="client-name">Jessica Miller</span>
+                            <span class="client-tag">Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-arrow prev" id="slider-prev" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <div class="slider-dots" id="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-arrow next" id="slider-next" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal-overlay" id="confirm-modal">
+        <div class="confirm-modal glass-panel">
+            <div class="success-icon-wrapper">
+                <svg class="success-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="success-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="success-checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h2>Appointment Confirmed!</h2>
+            <p>Your luxury hair experience is reserved. A confirmation ticket has been sent to your email.</p>
+            <div class="ticket-details">
+                <div class="ticket-row"><strong>Ticket ID:</strong> <span id="ticket-id">PHS-78249</span></div>
+                <div class="ticket-row"><strong>Stylist:</strong> <span id="ticket-stylist">-</span></div>
+                <div class="ticket-row"><strong>Date/Time:</strong> <span id="ticket-datetime">-</span></div>
+                <div class="ticket-row"><strong>Total:</strong> <span id="ticket-total">-</span></div>
+            </div>
+            <button class="btn btn-primary" id="btn-close-modal">Back to Homepage</button>
+        </div>
+    </div>
+
+    <!-- Contact & Footer Section -->
+    <footer class="main-footer section-padding">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Info Column -->
+                <div class="footer-col about">
+                    <a href="#" class="logo">
+                        <span class="logo-luxe">PARAS</span>
+                        <span class="logo-shear" style="margin-left: 8px;">HAIR SALON</span>
+                    </a>
+                    <p>Providing bespoke hair styling and premium relaxation in an exquisite urban retreat. Crafting beauty, one cut at a time.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg></a>
+                        <a href="#" aria-label="Pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a9 9 0 0 1-2.36-1.04C5.1 20.35 4.3 19 4.3 17.5c0-2.3 2.1-4.8 5-4.8.7 0 1.4.2 2 .5a9.3 9.3 0 0 0 5-6.8 5.7 5.7 0 0 0-5.8-6.1c-3.6 0-7.3 2.8-7.3 8.3 0 2.2 1.1 4.5 3.3 5.3a.6.6 0 0 1 .4.7c-.2.7-.4 1.4-.5 2.1a.5.5 0 0 1-.7.4c-3.7-1.3-5-4.8-5-8.5C.7 5.2 6-2.2 13-2.2c5.8 0 10.7 4.1 10.7 9.8a10.8 10.8 0 0 1-7.8 10.8c-2.3.6-4.6.4-6.9.1A6.7 6.7 0 0 1 8 22Z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Hours Column -->
+                <div class="footer-col hours">
+                    <h3>Salon Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span> <span>9:00 AM - 8:00 PM</span></li>
+                        <li><span>Saturday</span> <span>9:00 AM - 6:00 PM</span></li>
+                        <li><span>Sunday</span> <span>10:00 AM - 4:00 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="footer-col contact-info">
+                    <h3>Get In Touch</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Main Market, Near Railway Station, Balotra, Rajasthan 344022</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>appointments@parashairsalon.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Paras Hair Salon. All rights reserved. Designed for excellence.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Code -->
+    <script src="app.js"></script>
+</body>
+</html>
