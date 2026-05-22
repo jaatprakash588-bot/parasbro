@@ -1630,6 +1630,26 @@ body.light-theme ::-webkit-calendar-picker-indicator {
     color: var(--accent-gold);
 }
 
+.footer-map {
+    margin-top: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    height: 180px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color var(--transition-normal);
+}
+
+.footer-map:hover {
+    border-color: var(--accent-gold);
+}
+
+.footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 /* ==========================================================================
    ANIMATIONS & TRANSITIONS
    ========================================================================== */

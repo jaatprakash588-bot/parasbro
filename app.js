@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tag.innerText = `✓ ${tag.getAttribute('data-name').split(' ').slice(0, 2).join(' ')}`;
             } else {
                 tag.classList.remove('added');
-                tag.innerText = `+ ${tag.getAttribute('data-name').split(' ').slice(0, 2).join(' ')} ($${tag.getAttribute('data-price')})`;
+                tag.innerText = `+ ${tag.getAttribute('data-name').split(' ').slice(0, 2).join(' ')} (₹${tag.getAttribute('data-price')})`;
             }
         });
     }
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 itemDiv.innerHTML = `
                     <span class="service-name">${item.name}</span>
                     <div class="service-price-remove">
-                        <span>$${item.price}</span>
+                        <span>₹${item.price}</span>
                         <button type="button" class="remove-btn" data-id="${item.id}">×</button>
                     </div>
                 `;
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 miniItem.className = 'summary-service-item-mini';
                 miniItem.innerHTML = `
                     <span>${item.name}</span>
-                    <span>$${item.price}</span>
+                    <span>₹${item.price}</span>
                 `;
                 summaryServicesItems.appendChild(miniItem);
             });
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Recalculate price
         const total = selectedServices.reduce((sum, item) => sum + item.price, 0);
-        summaryTotalPrice.textContent = `$${total}`;
+        summaryTotalPrice.textContent = `₹${total}`;
 
         // 4. Validate Button Availability
         validateBookingSubmit();
@@ -457,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ticketIdSpan.textContent = randId;
         ticketStylistSpan.textContent = selectedStylist;
         ticketDatetimeSpan.textContent = `${formattedDate} at ${selectedTime}`;
-        ticketTotalSpan.textContent = `$${total}`;
+        ticketTotalSpan.textContent = `₹${total}`;
         
         // Open Modal
         confirmModal.classList.add('open');
